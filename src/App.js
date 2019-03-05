@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import RootView from './views/RootView/RootView';
 import ListView from './views/ListView/ListView';
 import TopView from './views/TopView/TopView';
+import Form from './components/Form/Form';
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
           <Route path="/list" component={ListView} />
           <Route path="/top" component={TopView} />
         </Switch>
+        <Form />
       </>
       </BrowserRouter>
     );

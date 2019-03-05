@@ -28,10 +28,12 @@ Input.propTypes = {
 }
 
 Input.defaultProps = {
-  tag: 'input',
   type: 'text',
+  tag: 'input',
+  name: '',
+  label: '',
   maxLength: 100,
-  placeholder: ""
+  placeholder: '',
 }
 
 export default Input;

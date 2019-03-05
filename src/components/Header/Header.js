@@ -6,12 +6,12 @@ import Input from '../Input/Input';
 const Header = ({ useButtonFn }) => (
   <header>
     <HeaderNavigation />
-    <Input placeholder="Szukaj" />
-    <Button onClick={useButtonFn}>szukaj</Button>
-    <Input placeholder="Login" />
-    <Input placeholder="Hasło" type="password" />
-    <Button onClick={useButtonFn}>zaloguj</Button>
-    <Button onClick={useButtonFn}>zarejestuj</Button>
+    <Input name="search" placeholder="Szukaj" />
+    <Button onClick={useButtonFn} children='szukaj' />
+    <Input name="login" placeholder="Login lub mail" />
+    <Input type="password" name="password" placeholder="Hasło" />
+    <Button onClick={useButtonFn} children='zaloguj' />
+    <Button onClick={useButtonFn} children='zarejestuj' />
   </header>
 );
 
