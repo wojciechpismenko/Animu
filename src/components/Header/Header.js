@@ -1,10 +1,11 @@
 import React from 'react';
 import HeaderNavigation from './HeaderNavigation';
+import styles from './Header.module.scss';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 
 const Header = ({ useButtonFn, openModelFn }) => (
-  <header>
+  <header className={styles.Wrapper}>
     <HeaderNavigation />
     <Input name="search" placeholder="Szukaj" />
     <Button onClick={useButtonFn} children='szukaj' />

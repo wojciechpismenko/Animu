@@ -1,0 +1,40 @@
+.Button {
+  display: block;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  padding: 7px 12px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  background: #4b4b4b;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+Button:hover {
+    text-decoration: none;
+    font-weight: 700;
+    color: #4b4b4b;
+    background: white;
+    border: 2px solid #4b4b4b;
+  }
+
+
+
+.NavItem {
+  display: inline-block;
+  margin-right: 50px;
+  list-style: none;
+
+  &_link {
+    text-decoration: none;
+    color: #4b4b4b;
+    font-weight: 500;
+
+    &_active {
+      font-weight: 700;
+    }
+  }
+}

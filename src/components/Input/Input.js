@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Input.module.scss';
 
 const Input = ({tag: Tag, type, name, label, maxLength, placeholder, ...props}) => (
   <>
     <Tag
+      className={styles.Input}
       type={type}
       name={name}
       id={name}
@@ -12,7 +14,7 @@ const Input = ({tag: Tag, type, name, label, maxLength, placeholder, ...props}) 
       placeholder={placeholder}
       {...props}
     />
-    <label htmlFor={name}>
+    <label className={styles.Label} htmlFor={name}>
       {label}
     </label>
   </>
@@ -32,7 +34,7 @@ Input.defaultProps = {
   tag: 'input',
   name: '',
   label: '',
-  maxLength: 100,
+  maxLength: 200,
   placeholder: '',
 }
 

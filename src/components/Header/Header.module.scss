@@ -1,0 +1,22 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 30px 50px;
+}
+
+// .Item {
+//   display: block;
+//   margin-right: 10px;
+//   list-style: none;
+
+//   &_link {
+//     text-decoration: none;
+//     color: #4b4b4b;
+//     font-weight: 500;
+
+//     &_active {
+//       font-weight: 700;
+//     }
+//   }
+// }

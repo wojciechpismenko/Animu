@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Header from './components/Header/Header';
+import "./App.module.scss";
 import RootView from './views/RootView/RootView';
 import ListView from './views/ListView/ListView';
 import TopView from './views/TopView/TopView';
 import Modal from './components/Modal/Modal';
+import Header from './components/Header/Header';
 
 
 class App extends React.Component {
@@ -22,7 +23,7 @@ class App extends React.Component {
 
   closeModal = (e) => {
     e.preventDefault();
-    
+
     this.setState({
       isModalOpen: false,
     })
