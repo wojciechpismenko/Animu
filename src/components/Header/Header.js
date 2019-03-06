@@ -3,7 +3,7 @@ import HeaderNavigation from './HeaderNavigation';
 import Button from '../Button/Button';
 import Input from '../Input/Input';
 
-const Header = ({ useButtonFn }) => (
+const Header = ({ useButtonFn, openModelFn }) => (
   <header>
     <HeaderNavigation />
     <Input name="search" placeholder="Szukaj" />
@@ -11,7 +11,7 @@ const Header = ({ useButtonFn }) => (
     <Input name="login" placeholder="Login lub mail" />
     <Input type="password" name="password" placeholder="Hasło" />
     <Button onClick={useButtonFn} children='zaloguj' />
-    <Button onClick={useButtonFn} children='zarejestuj' />
+    <Button onClick={openModelFn} children='zarejestuj' />
   </header>
 );
 
