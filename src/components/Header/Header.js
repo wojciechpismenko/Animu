@@ -8,11 +8,11 @@ const Header = ({ useButtonFn, openModelFn }) => (
   <header className={styles.Wrapper}>
     <HeaderNavigation />
     <Input name="search" placeholder="Szukaj" />
-    <Button onClick={useButtonFn} children='szukaj' />
+    <Button onClick={useButtonFn}>szukaj</Button>
     <Input name="login" placeholder="Login lub mail" />
     <Input type="password" name="password" placeholder="Hasło" />
-    <Button onClick={useButtonFn} children='zaloguj' />
-    <Button onClick={openModelFn} children='zarejestuj' />
+    <Button onClick={useButtonFn}>zaloguj</Button>
+    <Button onClick={openModelFn}>zarejestruj</Button>
   </header>
 );
 

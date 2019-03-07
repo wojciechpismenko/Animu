@@ -109,8 +109,8 @@ class Form extends React.Component {
             onChange={this.handleInputChange}
             value={this.state.passwordRepeat}
           />
-          <Button children='zarejestuj' onClick={this.registerButton
-              //, this.state.formCorrect && console.log('jak przekazac do App.js żeby przycisk wykonał również closeModalFn ???') 
+          <Button children='zarejestruj' onClick={this.registerButton
+              //, this.state.formCorrect && console.log('jak przekazac do App.js żeby przycisk wykonał również closeModalFn ???')
             } />
           </form>
       </div>

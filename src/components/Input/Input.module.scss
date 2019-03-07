@@ -1,24 +1,33 @@
+@import '../../variables.scss';
+
 .Input {
-  color: #4b4b4b;
-  font-weight: 500;
-  font-family: "Montserrat";
-  border: 2px solid #4b4b4b;
-  width: 200px;
-  background-color: white;
-  padding: 10px;
-  height: 40px;
+  display: block;
+  font-size: $smallFontSize;
+  font-family: $defaultFont;
+  text-decoration: none;
+  text-align: left;
+  max-width: 150px;
+  border: 0;
+  background-color: $normalGrey;
+  padding: 5px 15px 5px;
+  cursor: text;
+
+  &:hover {
+    background-color: $darkGrey;
+  }
 }
 
 .Label {
   display: none;
-  color: white;
-  font-family: "Montserrat";
-  font-weight: 500;
-  border: none;
-  line-height: 10px;
-  width: 200px;
-  background-color: none;
-  padding: 10px;
-  transition: 0.2s ease-out all;
+  font-size: $smallFontSize;
+  font-family: $defaultFont;
+  text-decoration: none;
+  text-align: left;
+  border: 0;
+  background-color: $normalGrey;
+  padding: 5px 15px 5px;
+  cursor: text;
+
 }
+
 

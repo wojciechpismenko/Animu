@@ -1,25 +1,37 @@
-.Logo {
-  width: 40px;
-  height: 40px;
-}
+@import '../../variables.scss';
 
 .Wrapper {
   padding: 0;
-  align-items: center;
+  //align-items: center;
 }
+
+// .Nav {
+//   display: block;
+//   padding: none;
+//   margin: none;
+//   height: 40px;
+//   position: absolute;
+// }
 
 .NavItem {
   display: inline-block;
-  margin-right: 50px;
+  align-items: flex-start;
+  margin-right: $marginNormal;
   list-style: none;
 
+
   &_link {
+    color: $lightGrey;
+    font-size: $normalFontSize;
     text-decoration: none;
-    color: #4b4b4b;
-    font-weight: 500;
 
     &_active {
-      font-weight: 700;
+      color: white;
     }
+  }
+
+  &_logo {
+  width: 37px;
+  height: 37px;
   }
 }
