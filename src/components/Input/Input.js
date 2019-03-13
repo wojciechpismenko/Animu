@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Input.module.scss';
+import styles from './Input.scss';
 
 const Input = ({tag: Tag, type, name, label, maxLength, placeholder, ...props}) => (
   <>

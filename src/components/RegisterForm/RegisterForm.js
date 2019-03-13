@@ -2,7 +2,7 @@ import React from 'react';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 
-class Form extends React.Component {
+class RegisterForm extends React.Component {
   state = {
     mail: '',
     login: '',
@@ -109,13 +109,11 @@ class Form extends React.Component {
             onChange={this.handleInputChange}
             value={this.state.passwordRepeat}
           />
-          <Button children='zarejestruj' onClick={this.registerButton
-              //, this.state.formCorrect && console.log('jak przekazac do App.js żeby przycisk wykonał również closeModalFn ???')
-            } />
+          <Button onClick={this.registerButton}>zarejestruj</Button>
           </form>
       </div>
     )
   }
 };
 
-export default Form;
+export default RegisterForm;
