@@ -1,14 +1,18 @@
-import React from 'react';
-import "./App.scss";
-import TopBar from './components/TopBar/TopBar';
+import React                        from 'react';
+import { library }                  from '@fortawesome/fontawesome-svg-core';
+import { faSearch, faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 
-class App extends React.Component {
+import TopBar               from './components/TopBar/TopBar';
+import "./App.scss";
+
+
+
+library.add(faSearch, faBars, faUser)
+
+export default class App extends React.Component {
   state = {
 
   }
-
-
-
 
   render() {
     return (
@@ -19,5 +23,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;

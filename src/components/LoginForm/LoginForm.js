@@ -1,8 +1,8 @@
-import React from 'react';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import React    from 'react';
+import Input    from '../Input/Input';
+import Button   from '../Button/Button';
 
-class LoginForm extends React.Component {
+export default class LoginForm extends React.Component {
   state = {
     login: '',
     password: '',
@@ -37,5 +37,3 @@ class LoginForm extends React.Component {
     )
   }
 };
-
-export default LoginForm;

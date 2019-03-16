@@ -1,8 +1,8 @@
-import React from 'react';
-import Input from '../Input/Input';
-import Button from '../Button/Button';
+import React    from 'react';
+import Input    from '../Input/Input';
+import Button   from '../Button/Button';
 
-class RegisterForm extends React.Component {
+export default class RegisterForm extends React.Component {
   state = {
     mail: '',
     login: '',
@@ -115,5 +115,3 @@ class RegisterForm extends React.Component {
     )
   }
 };
-
-export default RegisterForm;

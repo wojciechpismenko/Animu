@@ -18,23 +18,31 @@
       font-weight: 500;
     }
 
+    &-openForm {
+      @extend .Button;
+
+      display: inline-block;
+      align-items: center;
+      display: block;
+      font-size: $smallFontSize;
+    }
+
     &-logo {
       height: 40px;
-      weight: 40px;
+      width: 40px;
       display: inline-block;
       align-items: center;
     }
 
-    &-search {
-      @extend .TopBar-button;
+    &-svg {
+      display: inline-block;
+      align-items: center;
+      color: $normalGray;
+      pointer-events: none;
 
-      color: red;
-
-      &:before {
-        content: '\f002';
+      &:hover {
+        color: $darkGray;
       }
-
-
     }
   }
 
