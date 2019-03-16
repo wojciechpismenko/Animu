@@ -1,32 +1,23 @@
 @import '../../variables.scss';
 
 .Input {
-  display: block;
+  border: none;
+  background: none;
+  padding: 5px 10px 5px;
   font-size: $smallFontSize;
   font-family: $defaultFont;
+  font-weight: $smallFontWeight;
   text-decoration: none;
-  text-align: left;
-  max-width: 150px;
-  border: 0;
-  background-color: $normalGrey;
-  padding: 5px 15px 5px;
+  color: $normalGray;
   cursor: text;
 
-  &:hover {
-    background-color: $darkGrey;
+  &:focus {
+    color: $darkGray;
+    font-weight: $normalFontWeight;
   }
 }
 
 .Label {
-  display: none;
-  font-size: $smallFontSize;
-  font-family: $defaultFont;
-  text-decoration: none;
-  text-align: left;
-  border: 0;
-  background-color: $normalGrey;
-  padding: 5px 15px 5px;
-  cursor: text;
 
 }
 

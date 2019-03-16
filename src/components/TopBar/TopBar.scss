@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+@import '../Button/Button.scss';
+@import '../Input/Input.scss';
+
+.TopBar {
+  position: fixed;
+  padding: 5px 10px 5px;
+
+  &-button {
+    @extend .Button;
+
+    display: inline-block;
+    align-items: center;
+    margin: 0 10px 0 0;
+
+    &:hover {
+      color: $darkGray;
+      font-weight: 500;
+    }
+
+    &-logo {
+      height: 40px;
+      weight: 40px;
+      display: inline-block;
+      align-items: center;
+    }
+
+    &-search {
+      @extend .TopBar-button;
+
+      color: red;
+
+      &:before {
+        content: '\f002';
+      }
+
+
+    }
+  }
+
+  &-input {
+    @extend .Input;
+
+    display: inline-block;
+    align-items: center;
+    margin: 0 10px 0 0;
+    max-width: 100px;
+  }
+}

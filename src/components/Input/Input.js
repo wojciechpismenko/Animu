@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Input.scss';
+import './Input.scss';
 
 const Input = ({tag: Tag, type, name, label, maxLength, placeholder, ...props}) => (
   <>
     <Tag
-      className={styles.Input}
+      className='Input'
       type={type}
       name={name}
       id={name}
@@ -14,7 +14,7 @@ const Input = ({tag: Tag, type, name, label, maxLength, placeholder, ...props}) 
       placeholder={placeholder}
       {...props}
     />
-    <label className={styles.Label} htmlFor={name}>
+    <label className='Label' htmlFor={name}>
       {label}
     </label>
   </>

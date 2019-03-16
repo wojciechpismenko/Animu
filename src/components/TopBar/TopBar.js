@@ -1,35 +1,30 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import RootView from '../../views/RootView/RootView';
-import NewsView from '../../views/NewsView/NewsView';
-import ListView from '../../views/ListView/ListView';
-import TopView from '../../views/TopView/TopView';
-import SideBar from '../SideBar/SideBar';
-import Button from '../Button/Button';
-import Input from '../Input/Input';
-import RegisterForm from '../RegisterForm/RegisterForm'
-import LoginForm from '../LoginForm/LoginForm';
+import React                                        from 'react';
+import { NavLink, BrowserRouter, Route, Switch }    from 'react-router-dom';
 
-class TopBar extends React.Component {
+import RootView                                     from '../../views/RootView/RootView';
+import NewsView                                     from '../../views/NewsView/NewsView';
+import ListView                                     from '../../views/ListView/ListView';
+import TopView                                      from '../../views/TopView/TopView';
+import SideBar                                      from '../SideBar/SideBar';
+import Button                                       from '../Button/Button';
+import Input                                        from '../Input/Input';
+import RegisterForm                                 from '../RegisterForm/RegisterForm'
+import LoginForm                                    from '../LoginForm/LoginForm';
+import './TopBar.scss';
+
+export default class TopBar extends React.Component {
   state = {
-    SideBar: false,
-    RegisterForm: false,
-    LoginForm: false,
+    isModalOpen: '',
   }
 
   openModal = e => {
     e.preventDefault();
 
-    if (this.state[e.target.name] === false) {
-      this.setState({ [e.target.name]: true })
+    if (this.state.isModalOpen === e.target.name) {
+      this.setState({ isModalOpen: '' })
     } else {
-      this.setState({ [e.target.name]: false })
+      this.setState({ isModalOpen: e.target.name })
     }
-
-    if (e.target.name === 'LoginForm') { this.setState({ RegisterForm: false }) }
-
-    if (e.target.name === 'RegisterForm') { this.setState({ LoginForm: false }) }
   }
 
   useButton = () => {
@@ -38,22 +33,21 @@ class TopBar extends React.Component {
 
   render() {
     return (
-      <>
+      <div className='TopBar'>
         <BrowserRouter>
           <>
-            <Button onClick={this.openModal} name='SideBar'>KRESKI</Button>
-            <NavLink exact to="/">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDosx28S7ZL-VwKG_4P9lxO69wTpw892vy2sRE9vyxVtPr2otnbQ" alt="logo" />
+            <Button className='TopBar-button' onClick={this.openModal} name='SideBar'>KRESKI</Button>
+            <NavLink className='TopBar-button' exact to="/">
+              <img className='TopBar-button-logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDosx28S7ZL-VwKG_4P9lxO69wTpw892vy2sRE9vyxVtPr2otnbQ" alt="logo" />
             </NavLink>
-            <Input name="search" placeholder="Szukaj" />
-            <Button onClick={this.useButton}>szukaj</Button>
-            <Button onClick={this.openModal} name='LoginForm'>zaloguj</Button>
-            <Button onClick={this.openModal} name='RegisterForm'>zarejestruj</Button>
+            <Input className='TopBar-input' name="search" placeholder="Szukaj" />
+            <Button className='TopBar-button-search' onClick={this.useButton}>szukaj</Button>
+            <Button className='TopBar-button' onClick={this.openModal} name='LoginForm'>zaloguj</Button>
+            <Button className='TopBar-button' onClick={this.openModal} name='RegisterForm'>zarejestruj</Button>
 
-            {this.state.SideBar && <SideBar />}
-            {this.state.LoginForm && <LoginForm />}
-            {this.state.RegisterForm && <RegisterForm />}
-
+            { this.state.isModalOpen === 'SideBar' && <SideBar /> }
+            { this.state.isModalOpen === 'LoginForm' && <LoginForm /> }
+            { this.state.isModalOpen === 'RegisterForm' && <RegisterForm /> }
 
             <Switch>
               <Route exact path="/" component={RootView} />
@@ -63,9 +57,7 @@ class TopBar extends React.Component {
             </Switch>
           </>
         </BrowserRouter>
-      </>
+      </div>
     )
   }
 }
-
-export default TopBar;

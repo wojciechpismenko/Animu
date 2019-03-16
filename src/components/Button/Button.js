@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Button.scss';
+import './Button.scss';
 
 const Button = ({ children, ...props }) => (
-  <button className={styles.Button} {...props}>{children}</button>
+  <button className='Button' {...props}>{children}</button>
 );
 
 export default Button;
