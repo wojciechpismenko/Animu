@@ -43,19 +43,27 @@ export default class TopBar extends React.Component {
 
   render() {
     return (
-      <div className='TopBar'>
+      <>
         <BrowserRouter>
-          <>
+          <div className='TopBar'>
             <Button className='TopBar-button' onClick={this.openModal} name='SideBar'>
               <FontAwesomeIcon className='TopBar-button-svg' icon="bars" />
             </Button>
-            <NavLink className='TopBar-button' exact to="/">
-              <img className='TopBar-button-logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDosx28S7ZL-VwKG_4P9lxO69wTpw892vy2sRE9vyxVtPr2otnbQ" alt="logo" />
-            </NavLink>
-            <Input className='TopBar-input' name="search" placeholder="Szukaj" />
-            <Button className='TopBar-button' onClick={this.openModal} onClick={this.useButton}>
-              <FontAwesomeIcon className='TopBar-button-svg' icon="search" />
-            </Button>
+            <div className='TopBar-button'>
+              <NavLink className='TopBar-button-item' exact to="/">
+                <img className='TopBar-button-logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDosx28S7ZL-VwKG_4P9lxO69wTpw892vy2sRE9vyxVtPr2otnbQ" alt="logo" />
+              </NavLink>
+            </div>
+            <div className='TopBar-button'>
+              <div className='TopBar-input'>
+                <div className='TopBar-input-container'>
+                  <Input className='TopBar-input-container-textarea' name="search" placeholder="Szukaj" />
+                  <Button className='TopBar-input-container-button' onClick={this.useButton}>
+                    <FontAwesomeIcon className='TopBar-input-container-button-svg' icon="search" />
+                  </Button>
+                </div>
+              </div>
+            </div>
             <Button className='TopBar-button' onClick={this.openModal} name='LoginRegisterForm'>
               <FontAwesomeIcon className='TopBar-button-svg' icon="user" />
             </Button>
@@ -64,16 +72,18 @@ export default class TopBar extends React.Component {
             { this.state.isModalOpen === 'LoginRegisterForm' && this.openLoginRegisterButtons() }
             { this.state.isModalOpen === 'LoginForm' && <LoginForm /> }
             { this.state.isModalOpen === 'RegisterForm' && <RegisterForm /> }
+          </div>
 
+          <div className='Content'>
             <Switch>
               <Route exact path="/" component={RootView} />
               <Route path="/news" component={NewsView} />
               <Route path="/list" component={ListView} />
               <Route path="/top" component={TopView} />
             </Switch>
-          </>
+          </div>
         </BrowserRouter>
-      </div>
+      </>
     )
   }
 }
