@@ -51,7 +51,7 @@ export default class TopBar extends React.Component {
             </Button>
             <div className='TopBar-button' onClick={this.openModal} name='RootView'>
               <NavLink className='TopBar-button-item' exact to="/">
-                <img className='TopBar-button-logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDosx28S7ZL-VwKG_4P9lxO69wTpw892vy2sRE9vyxVtPr2otnbQ" alt="logo" />
+                <img className='TopBar-button-logo' src="https://images-na.ssl-images-amazon.com/images/I/31%2B5fJaHhpL._SX425_.jpg" alt="logo" />
               </NavLink>
             </div>
             <div className='TopBar-button'>

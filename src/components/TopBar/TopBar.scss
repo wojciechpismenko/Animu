@@ -30,8 +30,8 @@
     }
 
     &-logo {
-      height: 40px;
-      width: 40px;
+      height: 50px;
+      width: 50px;
       margin: 0;
       padding: 0;
     }
@@ -53,8 +53,7 @@
 
     &-container {
       justify-content: center;
-      display: grid;
-      grid-template-columns: auto 0px;
+      display: inline-flex;
       width: 100%;
 
       &-textarea {
@@ -70,8 +69,10 @@
         @extend .Button;
 
         position: relative;
-        right: 45px;
-        width: 50px;
+        right: 25px;
+        width: 0px;
+        margin: 0;
+        padding: 0;
 
         &-svg {
           color: $normalGray;
