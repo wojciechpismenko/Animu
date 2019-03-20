@@ -10,15 +10,10 @@
   text-decoration: none;
   color: $normalGray;
   cursor: text;
+  outline: none;
 
   &:focus {
     color: $darkGray;
     font-weight: $normalFontWeight;
   }
 }
-
-.Label {
-
-}
-
-

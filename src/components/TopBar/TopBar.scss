@@ -5,10 +5,11 @@
 .TopBar {
   position: fixed;
   padding: 5px 10px 5px;
-  display: grid;
-  grid-template-columns: 50px 50px 1fr 50px;
+  display: inline-grid;
+  grid-template-columns: 50px 50px auto 50px;
   align-items: center;
   width: 100vw;
+
 
   &-button {
     @extend .Button;
@@ -26,12 +27,6 @@
       justify-content: center;
       margin: 0;
       padding: 0;
-    }
-
-    &-openForm {
-      @extend .Button;
-
-      font-size: $smallFontSize;
     }
 
     &-logo {
@@ -55,23 +50,18 @@
   }
 
   &-input {
-    // position: relative;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // width: 100%;
 
     &-container {
       justify-content: center;
-      display: flex;
+      display: grid;
+      grid-template-columns: auto 0px;
       width: 100%;
 
       &-textarea {
         @extend .Input;
 
-        // position: relative;
         width: 100%;
-        max-width: 500px;
+        max-width: 300px;
         border: 1px solid $lightGray;
         color: $darkGray;
       }
@@ -93,10 +83,27 @@
       }
     }
   }
+
+  &-modal {
+    position: relative;
+    top: 50px;
+    right: 15px;
+    display: grid;
+    justify-content: end;
+
+    &-button {
+      @extend .Button;
+
+      margin: 0;
+      padding: 0;
+      text-align: end;
+    }
+  }
 }
 
 .Content {
-  padding: 5px 10px 5px;
-  position: absolute;
+  padding: 0px 20px;
+  position: relative;
   top: 50px;
+  display: block;
 }

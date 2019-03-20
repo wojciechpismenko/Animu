@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+@import '../Button/Button.scss';
+
+.SideBar {
+  position: relative;
+  top: 50px;
+  left: 20px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 3px 10px;
+  justify-content: start;
+  align-items: center;
+
+  &-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &-item {
+      @extend .Button;
+
+      margin: 0;
+      padding: 0;
+      text-align: start;
+
+      &:hover {
+        color: $darkGray;
+      }
+    }
+  }
+}

@@ -34,9 +34,9 @@ export default class TopBar extends React.Component {
 
   openLoginRegisterButtons = () => {
     return(
-      <div className='TopBar-button'>
-        <Button className='TopBar-button-openForm' onClick={this.openModal} name='LoginForm'>zaloguj</Button>
-        <Button className='TopBar-button-openForm' onClick={this.openModal} name='RegisterForm'>zarejestruj</Button>
+      <div className='TopBar-modal'>
+        <Button className='TopBar-modal-button' onClick={this.openModal} name='LoginForm'>zaloguj</Button>
+        <Button className='TopBar-modal-button' onClick={this.openModal} name='RegisterForm'>zarejestruj</Button>
       </div>
     )
   }
@@ -49,7 +49,7 @@ export default class TopBar extends React.Component {
             <Button className='TopBar-button' onClick={this.openModal} name='SideBar'>
               <FontAwesomeIcon className='TopBar-button-svg' icon="bars" />
             </Button>
-            <div className='TopBar-button'>
+            <div className='TopBar-button' onClick={this.openModal} name='RootView'>
               <NavLink className='TopBar-button-item' exact to="/">
                 <img className='TopBar-button-logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDosx28S7ZL-VwKG_4P9lxO69wTpw892vy2sRE9vyxVtPr2otnbQ" alt="logo" />
               </NavLink>
@@ -67,12 +67,12 @@ export default class TopBar extends React.Component {
             <Button className='TopBar-button' onClick={this.openModal} name='LoginRegisterForm'>
               <FontAwesomeIcon className='TopBar-button-svg' icon="user" />
             </Button>
-
-            { this.state.isModalOpen === 'SideBar' && <SideBar /> }
-            { this.state.isModalOpen === 'LoginRegisterForm' && this.openLoginRegisterButtons() }
-            { this.state.isModalOpen === 'LoginForm' && <LoginForm /> }
-            { this.state.isModalOpen === 'RegisterForm' && <RegisterForm /> }
           </div>
+
+          { this.state.isModalOpen === 'SideBar' && <SideBar /> }
+          { this.state.isModalOpen === 'LoginRegisterForm' && this.openLoginRegisterButtons() }
+          { this.state.isModalOpen === 'LoginForm' && <LoginForm /> }
+          { this.state.isModalOpen === 'RegisterForm' && <RegisterForm /> }
 
           <div className='Content'>
             <Switch>

@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+@import '../Button/Button.scss';
+@import '../Input/Input.scss';
+
+.LoginForm {
+  position: relative;
+  top: 50px;
+  right: 15px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 3px 10px;
+  justify-content: end;
+  align-items: center;
+
+  &-input{
+    @extend .Input;
+
+    border: 1px solid $lightGray;
+    color: $darkGray;
+  }
+
+  &-button {
+    @extend .Button;
+
+    margin: 0;
+    padding: 0;
+    text-align: end;
+
+    &:hover {
+      color: $darkGray;
+    }
+  }
+}

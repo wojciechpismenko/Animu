@@ -1,6 +1,8 @@
 import React    from 'react';
+
 import Input    from '../Input/Input';
 import Button   from '../Button/Button';
+import './RegisterForm.scss';
 
 export default class RegisterForm extends React.Component {
   state = {
@@ -81,37 +83,39 @@ export default class RegisterForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form>
-          <Input
-            name="mail"
-            placeholder="Mail"
-            onChange={this.handleInputChange}
-            value={this.state.mail}
-          />
-          <Input
-            name="login"
-            placeholder="Login"
-            onChange={this.handleInputChange}
-            value={this.state.login}
-          />
-          <Input
-            type="password"
-            name="password"
-            placeholder="Hasło"
-            onChange={this.handleInputChange}
-            value={this.state.password}
-          />
-          <Input
-            type="password"
-            name="passwordRepeat"
-            placeholder="Powtórz hasło"
-            onChange={this.handleInputChange}
-            value={this.state.passwordRepeat}
-          />
-          <Button onClick={this.registerButton}>zarejestruj</Button>
-          </form>
-      </div>
+      <form className='RegisterForm'>
+        <Input
+          className='RegisterForm-input'
+          name="mail"
+          placeholder="Mail"
+          onChange={this.handleInputChange}
+          value={this.state.mail}
+        />
+        <Input
+          className='RegisterForm-input'
+          name="login"
+          placeholder="Login"
+          onChange={this.handleInputChange}
+          value={this.state.login}
+        />
+        <Input
+          className='RegisterForm-input'
+          type="password"
+          name="password"
+          placeholder="Hasło"
+          onChange={this.handleInputChange}
+          value={this.state.password}
+        />
+        <Input
+          className='RegisterForm-input'
+          type="password"
+          name="passwordRepeat"
+          placeholder="Powtórz hasło"
+          onChange={this.handleInputChange}
+          value={this.state.passwordRepeat}
+        />
+        <Button className='RegisterForm-button' onClick={this.registerButton}>zarejestruj</Button>
+      </form>
     )
   }
 };
