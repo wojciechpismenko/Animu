@@ -1,7 +1,8 @@
 import React from 'react';
+import './RootView.scss';
 
 const RootView = () => (
-  <div>strona startowa</div>
+  <div className='RootView'>strona startowa</div>
 );
 
 export default RootView;

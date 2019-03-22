@@ -9,7 +9,8 @@
   grid-template-columns: 50px 50px auto 50px;
   align-items: center;
   width: 100vw;
-
+  box-shadow: $boxShadow;
+  background-color: white;
 
   &-button {
     @extend .Button;
@@ -60,7 +61,7 @@
         @extend .Input;
 
         width: 100%;
-        max-width: 300px;
+        max-width: 500px;
         border: 1px solid $lightGray;
         color: $darkGray;
       }
@@ -70,15 +71,13 @@
 
         position: relative;
         right: 25px;
-        width: 0px;
         margin: 0;
         padding: 0;
 
         &-svg {
           color: $normalGray;
-          pointer-events: none;
           margin: 0;
-          padding: 0;
+          padding: 2px 0 0 0;
           font-size: 18px;
         }
       }
@@ -87,7 +86,7 @@
 
   &-modal {
     position: relative;
-    top: 50px;
+    top: $offsetMenu;
     right: 15px;
     display: grid;
     justify-content: end;
@@ -100,11 +99,4 @@
       text-align: end;
     }
   }
-}
-
-.Content {
-  padding: 0px 20px;
-  position: relative;
-  top: 50px;
-  display: block;
 }

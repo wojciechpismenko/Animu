@@ -8,13 +8,13 @@ const SideBar = () => (
     <ul className='SideBar-list'>
       <li>
         <NavLink className='SideBar-list-item' to="/news">nowości</NavLink>
-      </li >
-      <li >
+      </li>
+      <li>
         <NavLink className='SideBar-list-item' to="/list">lista anime</NavLink>
-      </li >
-      <li >
+      </li>
+      <li>
         <NavLink className='SideBar-list-item' to="/top">top anime</NavLink>
-      </li >
+      </li>
     </ul>
   </nav>
 );

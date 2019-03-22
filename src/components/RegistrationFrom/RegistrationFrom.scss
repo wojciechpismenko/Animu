@@ -2,7 +2,7 @@
 @import '../Button/Button.scss';
 @import '../Input/Input.scss';
 
-.LoginForm {
+.RegistrationFrom {
   position: relative;
   top: $offsetMenu;
   display: grid;
@@ -14,11 +14,24 @@
   box-shadow: 0 7px 10px -8px rgba($lightGray, .4);
   background-color: white;
 
-  &-input{
-    @extend .Input;
+  &-container {
 
-    border: 1px solid $lightGray;
-    color: $darkGray;
+    &-input {
+      @extend .Input;
+
+      border: 1px solid $lightGray;
+      color: $darkGray;
+
+      &-svg {
+        position: absolute;
+        right: 25px;
+        margin: 5px 0 0 0;
+        color: $lightGray;
+        opacity: .3;
+        pointer-events: none;
+        font-size: 18px;
+      }
+    }
   }
 
   &-button {

@@ -9,7 +9,7 @@ import TopView                                      from '../../views/TopView/To
 import SideBar                                      from '../SideBar/SideBar';
 import Button                                       from '../Button/Button';
 import Input                                        from '../Input/Input';
-import RegisterForm                                 from '../RegisterForm/RegisterForm'
+import RegistrationFrom                             from '../RegistrationFrom/RegistrationFrom';
 import LoginForm                                    from '../LoginForm/LoginForm';
 import './TopBar.scss';
 
@@ -32,11 +32,11 @@ export default class TopBar extends React.Component {
     console.log('użyto buttona')
   }
 
-  openLoginRegisterButtons = () => {
+  openLoginRegistrationButtons = () => {
     return(
       <div className='TopBar-modal'>
         <Button className='TopBar-modal-button' onClick={this.openModal} name='LoginForm'>zaloguj</Button>
-        <Button className='TopBar-modal-button' onClick={this.openModal} name='RegisterForm'>zarejestruj</Button>
+        <Button className='TopBar-modal-button' onClick={this.openModal} name='RegistrationFrom'>zarejestruj</Button>
       </div>
     )
   }
@@ -64,17 +64,17 @@ export default class TopBar extends React.Component {
                 </div>
               </div>
             </div>
-            <Button className='TopBar-button' onClick={this.openModal} name='LoginRegisterForm'>
+            <Button className='TopBar-button' onClick={this.openModal} name='LoginRegistrationFrom'>
               <FontAwesomeIcon className='TopBar-button-svg' icon="user" />
             </Button>
           </div>
 
           { this.state.isModalOpen === 'SideBar' && <SideBar /> }
-          { this.state.isModalOpen === 'LoginRegisterForm' && this.openLoginRegisterButtons() }
+          { this.state.isModalOpen === 'LoginRegistrationFrom' && this.openLoginRegistrationButtons() }
           { this.state.isModalOpen === 'LoginForm' && <LoginForm /> }
-          { this.state.isModalOpen === 'RegisterForm' && <RegisterForm /> }
+          { this.state.isModalOpen === 'RegistrationFrom' && <RegistrationFrom /> }
 
-          <div className='Content'>
+          <div>
             <Switch>
               <Route exact path="/" component={RootView} />
               <Route path="/news" component={NewsView} />

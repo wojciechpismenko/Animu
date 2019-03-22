@@ -2,19 +2,24 @@
 @import '../Button/Button.scss';
 
 .SideBar {
-  position: relative;
-  top: 50px;
-  left: 20px;
+  position: fixed;
+  top: $offsetMenu;
   display: grid;
   grid-template-columns: auto;
   grid-gap: 3px 10px;
   justify-content: start;
-  align-items: center;
+  align-items: top;
+  height: calc(100vh - 70px);
+  padding: 0 20px;
+  margin: 0;
+  box-shadow: 7px 0 10px -8px rgba($lightGray, .4);
+  background-color: white;
 
   &-list{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background: none;
 
     &-item {
       @extend .Button;
@@ -22,6 +27,7 @@
       margin: 0;
       padding: 0;
       text-align: start;
+      background: none;
 
       &:hover {
         color: $darkGray;
