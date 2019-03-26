@@ -3,13 +3,14 @@
 @import '../Input/Input.scss';
 
 .LoginForm {
-  position: relative;
-  top: $offsetMenu;
+  position: absolute;
+  right: 0px;
+  width: 250px;
   display: grid;
   grid-template-columns: auto;
   grid-gap: 3px 10px;
   justify-content: end;
-  padding: 0 15px;
+  padding: 5px 15px 5px;
   margin: 0;
   box-shadow: 0 7px 10px -8px rgba($lightGray, .4);
   background-color: white;

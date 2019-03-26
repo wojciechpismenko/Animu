@@ -86,19 +86,39 @@
     }
   }
 
-  &-modal {
+  &-content {
     position: relative;
     top: $offsetMenu;
-    right: 15px;
-    display: grid;
-    justify-content: end;
+    display: flex;
 
-    &-button {
-      @extend .Button;
-
+    &-modal {
+      position: absolute;
+      right: 0px;
+      width: 250px;
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 3px 10px;
+      justify-content: end;
+      padding: 5px 15px 5px;
       margin: 0;
-      padding: 0;
-      text-align: end;
+      box-shadow: 0 7px 10px -8px rgba($lightGray, .4);
+      background-color: white;
+
+      &-button {
+        @extend .Button;
+
+        margin: 0;
+        padding: 0;
+        text-align: end;
+      }
+    }
+    &-sideBar {
+      width: 100%;
+
+    }
+
+    &-view {
+      display: block;
     }
   }
 }

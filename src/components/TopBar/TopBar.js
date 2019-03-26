@@ -34,9 +34,9 @@ export default class TopBar extends React.Component {
 
   openLoginRegistrationButtons = () => {
     return(
-      <div className='TopBar-modal'>
-        <Button className='TopBar-modal-button' onClick={this.openModal} name='LoginForm'>zaloguj</Button>
-        <Button className='TopBar-modal-button' onClick={this.openModal} name='RegistrationFrom'>zarejestruj</Button>
+      <div className='TopBar-content-modal'>
+        <Button className='TopBar-content-modal-button' onClick={this.openModal} name='LoginForm'>zaloguj</Button>
+        <Button className='TopBar-content-modal-button' onClick={this.openModal} name='RegistrationFrom'>zarejestruj</Button>
       </div>
     )
   }
@@ -69,17 +69,19 @@ export default class TopBar extends React.Component {
             </Button>
           </div>
 
-          { this.state.isModalOpen === 'SideBar' && <SideBar /> }
-          { this.state.isModalOpen === 'LoginRegistrationFrom' && this.openLoginRegistrationButtons() }
-          { this.state.isModalOpen === 'LoginForm' && <LoginForm /> }
-          { this.state.isModalOpen === 'RegistrationFrom' && <RegistrationFrom /> }
+          <div className='TopBar-content'>
+            { this.state.isModalOpen === 'SideBar' && <SideBar className='TopBar-content-sideBar' openModalFn={this.openModal} /> }
+            { this.state.isModalOpen === 'LoginRegistrationFrom' && this.openLoginRegistrationButtons() }
+            { this.state.isModalOpen === 'LoginForm' && <LoginForm className='TopBar-content-modal' /> }
+            { this.state.isModalOpen === 'RegistrationFrom' && <RegistrationFrom className='TopBar-content-modal' /> }
 
-          <Switch>
-            <Route exact path="/" component={RootView} />
-            <Route path="/news" component={NewsView} />
-            <Route path="/list" component={ListView} />
-            <Route path="/top" component={TopView} />
-          </Switch>
+            <Switch className='TopBar-content-view'>
+              <Route exact path="/" component={RootView} />
+              <Route path="/news" component={NewsView} />
+              <Route path="/list" component={ListView} />
+              <Route path="/top" component={TopView} />
+            </Switch>
+          </div>
 
         </BrowserRouter>
       </>

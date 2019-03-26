@@ -2,8 +2,7 @@
 @import '../Button/Button.scss';
 
 .SideBar {
-  position: fixed;
-  top: $offsetMenu;
+  z-index: 250;
   display: grid;
   grid-template-columns: auto;
   grid-gap: 3px 10px;
