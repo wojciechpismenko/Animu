@@ -44,9 +44,6 @@
       padding: 0;
       font-size: 25px;
 
-      &:hover {
-        color: $darkGray;
-      }
     }
   }
 
@@ -63,7 +60,7 @@
         width: 100%;
         max-width: 500px;
         border: 1px solid $lightGray;
-        color: $darkGray;
+        color: $lightGray;
       }
 
       &-button {
@@ -73,12 +70,17 @@
         right: 25px;
         margin: 0;
         padding: 0;
+        width: 0;
 
         &-svg {
           color: $normalGray;
           margin: 0;
           padding: 2px 0 0 0;
           font-size: 18px;
+
+          &:hover {
+            color: $darkGray;
+          }
         }
       }
     }

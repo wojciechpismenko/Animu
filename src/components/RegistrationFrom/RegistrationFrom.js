@@ -137,7 +137,7 @@ export default class RegistrationFrom extends React.Component {
             onChange={this.handleInputChange}
             value={this.state.passwordRepeat}
           />
-          {this.renderIcon('passwordConfirmation')}
+          {this.state.password === this.state.passwordRepeat ? this.renderIcon('passwordConfirmation') : this.renderIcon(null)}
         </div>
         <Button className='RegistrationFrom-button' onClick={this.registrationButton}>zarejestruj</Button>
       </form>

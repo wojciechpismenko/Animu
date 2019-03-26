@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './TopView.scss';
+
 const TopView = () => (
-  <div>top anime</div>
+  <div className='TopView'>top anime</div>
 );
 
 export default TopView;

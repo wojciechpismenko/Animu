@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.ListView {
+  position: relative;
+  top: $offsetMenu;
+  display: block;
+  // align-items: end;
+  // align-content: end;
+  // align-self: end;
+  // justify-content: end;
+  // justify-items: end;
+  // justify-self: end;
+  border: none;
+  background: none;
+  padding: 0 20px;
+  margin: 0;
+
+  font-size: $normalFontSize;
+  font-family: $defaultFont;
+  font-weight: $normalFontWeight;
+  text-decoration: none;
+  color: $normalGray;
+}

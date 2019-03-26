@@ -1,7 +1,9 @@
 import React from 'react';
 
+import './NewsView.scss'
+
 const NewsView = () => (
-  <div>nowości w anime</div>
+  <div className='NewsView'>nowości w anime</div>
 );
 
 export default NewsView;

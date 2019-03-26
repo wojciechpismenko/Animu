@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './RootView.scss';
 
 const RootView = () => (

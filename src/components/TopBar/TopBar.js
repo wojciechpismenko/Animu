@@ -74,14 +74,13 @@ export default class TopBar extends React.Component {
           { this.state.isModalOpen === 'LoginForm' && <LoginForm /> }
           { this.state.isModalOpen === 'RegistrationFrom' && <RegistrationFrom /> }
 
-          <div>
-            <Switch>
-              <Route exact path="/" component={RootView} />
-              <Route path="/news" component={NewsView} />
-              <Route path="/list" component={ListView} />
-              <Route path="/top" component={TopView} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/" component={RootView} />
+            <Route path="/news" component={NewsView} />
+            <Route path="/list" component={ListView} />
+            <Route path="/top" component={TopView} />
+          </Switch>
+
         </BrowserRouter>
       </>
     )
