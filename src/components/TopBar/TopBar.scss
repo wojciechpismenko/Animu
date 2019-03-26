@@ -2,6 +2,11 @@
 @import '../Button/Button.scss';
 @import '../Input/Input.scss';
 
+@keyframes openModal {
+  0% {  transform: translateX(250px) }
+  100% { transform: translateX(0px) }
+}
+
 .TopBar {
   position: fixed;
   padding: 5px 10px 5px;
@@ -43,7 +48,6 @@
       margin: 0;
       padding: 0;
       font-size: 25px;
-
     }
   }
 
@@ -103,6 +107,10 @@
       margin: 0;
       box-shadow: 0 7px 10px -8px rgba($lightGray, .4);
       background-color: white;
+      animation: openModal .5s ease-in-out 0s 1 normal forwards;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+
+
 
       &-button {
         @extend .Button;
@@ -114,7 +122,6 @@
     }
     &-sideBar {
       width: 100%;
-
     }
 
     &-view {

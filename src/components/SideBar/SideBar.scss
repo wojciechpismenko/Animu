@@ -1,6 +1,11 @@
 @import '../../variables.scss';
 @import '../Button/Button.scss';
 
+@keyframes openSideBar {
+  0% {  transform: translateX(-250px) }
+  100% { transform: translateX(0px) }
+}
+
 .SideBar {
   z-index: 250;
   display: grid;
@@ -13,6 +18,7 @@
   margin: 0;
   box-shadow: 7px 0 10px -8px rgba($lightGray, .4);
   background-color: white;
+  animation: openSideBar .7s;
 
   &-list{
     list-style-type: none;
